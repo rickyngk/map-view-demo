@@ -11,20 +11,28 @@ import GoogleMaps
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mapView: GMSMapView!
+    var sourceMarker: GMSMarker!
+    var destMarker: GMSMarker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+
         let camera = GMSCameraPosition.cameraWithLatitude(-33.86, longitude: 151.20, zoom: 6)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-        mapView.myLocationEnabled = true
-        self.view = mapView
+        self.mapView.camera = camera
+        self.mapView.myLocationEnabled = true
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        sourceMarker = GMSMarker()
+        sourceMarker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
+        sourceMarker.title = "Sydney"
+        sourceMarker.snippet = "Australia"
+        sourceMarker.map = self.mapView
+        
+        destMarker = GMSMarker()
+        destMarker.position = CLLocationCoordinate2DMake(-33.86, 151.00)
+        destMarker.title = "Sydney"
+        destMarker.snippet = "Australia"
+        destMarker.map = self.mapView
     }
 
     override func didReceiveMemoryWarning() {
