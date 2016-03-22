@@ -1,0 +1,6 @@
+
+/* Class = "UITextField"; placeholder = "Enter destination"; ObjectID = "9mA-ov-Yae"; */
+"9mA-ov-Yae.placeholder" = "Nơi đến";
+
+/* Class = "UITextField"; placeholder = "Enter depart point"; ObjectID = "GJH-cE-ocK"; */
+"GJH-cE-ocK.placeholder" = "Vị trí khởi hành";
