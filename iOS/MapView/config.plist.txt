@@ -1,0 +1,13 @@
+//
+//  config.plist.template
+//  MapView
+//
+//  Created by Nguyen Khanh Duy on 3/22/16.
+//  Copyright © 2016 Nguyen Khanh Duy. All rights reserved.
+//
+
+import Foundation
+
+struct Constants {
+    static let GOOGLE_API_KEY = "AIzaSyCl6l3P0X4NBfjg7GRtTpqbijv-2UtNiIU";
+}
