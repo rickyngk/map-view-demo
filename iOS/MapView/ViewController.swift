@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         self.mapView.camera = camera
         self.mapView.myLocationEnabled = true
         
-        sourceMarker = XGMSMarker.create("From", map: self.mapView);
-        destMarker = XGMSMarker.create("Dest", map: self.mapView);
+        sourceMarker = XGMSMarker.create(NSLocalizedString("From", comment: ""), map: self.mapView);
+        destMarker = XGMSMarker.create(NSLocalizedString("To", comment: ""), map: self.mapView);
         destMarker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
         
         
@@ -88,8 +88,8 @@ extension ViewController {
         self.presentViewController(acController, animated: true, completion: nil)
     }
     
-    private func updateMarker(marker: XGMSMarker, position: CLLocationCoordinate2D) {
-        marker.updatePosition(position)
+    private func updateMarker(marker: XGMSMarker, position: CLLocationCoordinate2D, caption: String) {
+        marker.updatePosition(position, caption: caption)
         
         
         //update camera
@@ -124,10 +124,10 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
         self.dismissViewControllerAnimated(true, completion: {
             if (self.currentInput == self.inputDepart) {
                 self.inputDepart.text = place.name
-                self.updateMarker(self.sourceMarker, position: place.coordinate)
+                self.updateMarker(self.sourceMarker, position: place.coordinate, caption: place.name)
             } else if (self.currentInput == self.inputDestination) {
                 self.inputDestination.text = place.formattedAddress
-                self.updateMarker(self.destMarker, position: place.coordinate)
+                self.updateMarker(self.destMarker, position: place.coordinate, caption: place.name)
             }
         })
     }
