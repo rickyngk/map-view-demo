@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     var destMarker: XGMSMarker!
     var routePolyline: GMSPolyline!
     let routeService = GMRouteService()
-    var locManager:CLLocationManager!
+    
+    //can not test in similator -- remove
+    //var locManager:CLLocationManager!
     
     weak var currentInput:UITextField?
     
@@ -41,8 +43,10 @@ class ViewController: UIViewController {
         destMarker = XGMSMarker.create("Dest", map: self.mapView);
         destMarker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
         
-        //find current position
         
+        /*
+        // can not test in similator -- remove
+        //find current position
         if CLLocationManager.locationServicesEnabled() {
             locManager = CLLocationManager()
             locManager.requestWhenInUseAuthorization()
@@ -50,6 +54,7 @@ class ViewController: UIViewController {
             locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locManager.startUpdatingLocation()
         }
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +63,8 @@ class ViewController: UIViewController {
     }
 }
 
+/*
+// can not test in similator -- remove
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("\(error)");
@@ -71,6 +78,7 @@ extension ViewController: CLLocationManagerDelegate {
         }
     }
 }
+*/
 
 extension ViewController {
     private func onSelectLocation(sender: AnyObject) {
