@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		905FBA181AE2E56FDC1A685A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7BF024734AF35F9DB962FD /* libPods.a */; };
+		C7BE28BA1CA7D17200B2451C /* XGMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE28B91CA7D17200B2451C /* XGMSMarker.swift */; };
 		C7C0F3C61CA120DC00F4E8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3C51CA120DC00F4E8B4 /* AppDelegate.swift */; };
 		C7C0F3C81CA120DC00F4E8B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3C71CA120DC00F4E8B4 /* ViewController.swift */; };
 		C7C0F3CB1CA120DC00F4E8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3C91CA120DC00F4E8B4 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		33B770E4AE747BEC17648BCB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C76201F31CA1548100BEF30D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C76201F41CA154A300BEF30D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		C7BE28B91CA7D17200B2451C /* XGMSMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGMSMarker.swift; sourceTree = "<group>"; };
 		C7C0F3C21CA120DC00F4E8B4 /* MapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C0F3C51CA120DC00F4E8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C0F3C71CA120DC00F4E8B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				C7C0F3C51CA120DC00F4E8B4 /* AppDelegate.swift */,
 				C7C0F3C71CA120DC00F4E8B4 /* ViewController.swift */,
+				C7BE28B91CA7D17200B2451C /* XGMSMarker.swift */,
 				C7C0F3C91CA120DC00F4E8B4 /* Main.storyboard */,
 				C7C0F3CC1CA120DC00F4E8B4 /* Assets.xcassets */,
 				C7C0F3CE1CA120DC00F4E8B4 /* LaunchScreen.storyboard */,
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BE28BA1CA7D17200B2451C /* XGMSMarker.swift in Sources */,
 				C7C0F3F41CA12C5D00F4E8B4 /* config.swift in Sources */,
 				C7C0F3C81CA120DC00F4E8B4 /* ViewController.swift in Sources */,
 				C7C0F3C61CA120DC00F4E8B4 /* AppDelegate.swift in Sources */,
