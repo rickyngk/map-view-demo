@@ -19,7 +19,7 @@
 		C7C0F3DB1CA120DC00F4E8B4 /* MapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3DA1CA120DC00F4E8B4 /* MapViewTests.swift */; };
 		C7C0F3E61CA120DC00F4E8B4 /* MapViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3E51CA120DC00F4E8B4 /* MapViewUITests.swift */; };
 		C7C0F3F41CA12C5D00F4E8B4 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3F31CA12C5D00F4E8B4 /* config.swift */; };
-		C7C0F3F81CA12E7800F4E8B4 /* config.plist.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3F71CA12E7800F4E8B4 /* config.plist.txt */; };
+		C7C0F3F81CA12E7800F4E8B4 /* config.swift.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3F71CA12E7800F4E8B4 /* config.swift.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		C7C0F3E51CA120DC00F4E8B4 /* MapViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUITests.swift; sourceTree = "<group>"; };
 		C7C0F3E71CA120DC00F4E8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C0F3F31CA12C5D00F4E8B4 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
-		C7C0F3F71CA12E7800F4E8B4 /* config.plist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.plist.txt; sourceTree = "<group>"; };
+		C7C0F3F71CA12E7800F4E8B4 /* config.swift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.swift.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +144,7 @@
 				C7C0F3CE1CA120DC00F4E8B4 /* LaunchScreen.storyboard */,
 				C7C0F3D11CA120DC00F4E8B4 /* Info.plist */,
 				C7C0F3F31CA12C5D00F4E8B4 /* config.swift */,
-				C7C0F3F71CA12E7800F4E8B4 /* config.plist.txt */,
+				C7C0F3F71CA12E7800F4E8B4 /* config.swift.txt */,
 				C7BE28BB1CA7D66A00B2451C /* GMRouteService.swift */,
 			);
 			path = MapView;
@@ -279,7 +279,7 @@
 				C7BE28C51CA83B7600B2451C /* Localizable.strings in Resources */,
 				C7C0F3D01CA120DC00F4E8B4 /* LaunchScreen.storyboard in Resources */,
 				C7C0F3CD1CA120DC00F4E8B4 /* Assets.xcassets in Resources */,
-				C7C0F3F81CA12E7800F4E8B4 /* config.plist.txt in Resources */,
+				C7C0F3F81CA12E7800F4E8B4 /* config.swift.txt in Resources */,
 				C7C0F3CB1CA120DC00F4E8B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
