@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     var sourceMarker: XGMSMarker!
     var destMarker: XGMSMarker!
+    var routePolyline: GMSPolyline!
+    let routeService = GMRouteService()
     
     weak var currentInput:UITextField?
     
@@ -62,6 +64,18 @@ extension ViewController {
             let bounds = GMSCoordinateBounds(coordinate: sourceMarker.position, coordinate: destMarker.position)
             let camera = mapView.cameraForBounds(bounds, insets:UIEdgeInsets.init(top: 100.0, left: 100.0, bottom: 100.0, right: 100.0))
             mapView.camera = camera!
+            let source = String(format: "%f,%f", sourceMarker.position.latitude, sourceMarker.position.longitude)
+            let dest = String(format: "%f,%f", destMarker.position.latitude, destMarker.position.longitude)
+            routeService.search(source, destination: dest, withCompletionHandler: { (status, success) in
+                if (success) {
+                    //draw route
+                    let route = self.routeService.overviewPolyline["points"] as! String
+                    let path: GMSPath = GMSPath(fromEncodedPath: route)!
+                    self.routePolyline = GMSPolyline(path: path)
+                    self.routePolyline.map = self.mapView
+                }
+            })
+
         } else if (destMarker.hasInit) {
             let camera = GMSCameraPosition.cameraWithLatitude(destMarker.position.latitude, longitude: destMarker.position.longitude, zoom: 1)
             mapView.camera = camera
@@ -70,7 +84,7 @@ extension ViewController {
             mapView.camera = camera
         }
         
-        //show route
+                //show route
     }
 }
 

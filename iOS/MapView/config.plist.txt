@@ -9,5 +9,6 @@
 import Foundation
 
 struct Constants {
-    static let GOOGLE_API_KEY = "AIzaSyCl6l3P0X4NBfjg7GRtTpqbijv-2UtNiIU";
+    static let GOOGLE_API_KEY = "enter your key here";
+    static let GOOGLE_MAP_SERVER_KEY = "enter your server key here";
 }
