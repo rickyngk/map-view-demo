@@ -19,7 +19,6 @@
 		C7C0F3E61CA120DC00F4E8B4 /* MapViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3E51CA120DC00F4E8B4 /* MapViewUITests.swift */; };
 		C7C0F3F41CA12C5D00F4E8B4 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3F31CA12C5D00F4E8B4 /* config.swift */; };
 		C7C0F3F81CA12E7800F4E8B4 /* config.plist.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3F71CA12E7800F4E8B4 /* config.plist.txt */; };
-		C7C0F3FA1CA1301A00F4E8B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C0F3F91CA1301A00F4E8B4 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		C7C0F3E71CA120DC00F4E8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C0F3F31CA12C5D00F4E8B4 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		C7C0F3F71CA12E7800F4E8B4 /* config.plist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.plist.txt; sourceTree = "<group>"; };
-		C7C0F3F91CA1301A00F4E8B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7C0F3FA1CA1301A00F4E8B4 /* CoreLocation.framework in Frameworks */,
 				905FBA181AE2E56FDC1A685A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +92,6 @@
 		363387149831480F9FED5FA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C7C0F3F91CA1301A00F4E8B4 /* CoreLocation.framework */,
 				2A7BF024734AF35F9DB962FD /* libPods.a */,
 			);
 			name = Frameworks;

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var destMarker: XGMSMarker!
     var routePolyline: GMSPolyline!
     let routeService = GMRouteService()
+    var locManager:CLLocationManager!
     
     weak var currentInput:UITextField?
     
@@ -39,11 +40,35 @@ class ViewController: UIViewController {
         sourceMarker = XGMSMarker.create("From", map: self.mapView);
         destMarker = XGMSMarker.create("Dest", map: self.mapView);
         destMarker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
+        
+        //find current position
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locManager = CLLocationManager()
+            locManager.requestWhenInUseAuthorization()
+            locManager.delegate = self
+            locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locManager.startUpdatingLocation()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("\(error)");
+    }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        if (!destMarker.hasInit && sourceMarker.hasInit) {
+            let camera = GMSCameraPosition.cameraWithLatitude(locValue.latitude, longitude: locValue.longitude, zoom: 2)
+            mapView.camera = camera
+            locManager.stopUpdatingLocation();
+        }
     }
 }
 
@@ -83,8 +108,6 @@ extension ViewController {
             let camera = GMSCameraPosition.cameraWithLatitude(sourceMarker.position.latitude, longitude: sourceMarker.position.longitude, zoom: 1)
             mapView.camera = camera
         }
-        
-                //show route
     }
 }
 
