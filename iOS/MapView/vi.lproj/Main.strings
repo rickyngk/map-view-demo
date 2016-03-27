@@ -1,6 +1,12 @@
 
-/* Class = "UITextField"; placeholder = "Enter destination"; ObjectID = "9mA-ov-Yae"; */
+/* Class = "UITextField"; placeholder = "Nơi đến"; ObjectID = "9mA-ov-Yae"; */
 "9mA-ov-Yae.placeholder" = "Nơi đến";
 
-/* Class = "UITextField"; placeholder = "Enter depart point"; ObjectID = "GJH-cE-ocK"; */
+/* Class = "UITextField"; placeholder = "Vị trí khởi hành"; ObjectID = "GJH-cE-ocK"; */
 "GJH-cE-ocK.placeholder" = "Vị trí khởi hành";
+
+/* Class = "UILabel"; text = "To:"; ObjectID = "IZI-R6-7dy"; */
+"IZI-R6-7dy.text" = "Đến:";
+
+/* Class = "UILabel"; text = "From:"; ObjectID = "e4k-pg-emy"; */
+"e4k-pg-emy.text" = "Từ:";

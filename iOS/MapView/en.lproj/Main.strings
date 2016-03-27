@@ -4,3 +4,9 @@
 
 /* Class = "UITextField"; placeholder = "Enter depart point"; ObjectID = "GJH-cE-ocK"; */
 "GJH-cE-ocK.placeholder" = "Enter depart point";
+
+/* Class = "UILabel"; text = "To:"; ObjectID = "IZI-R6-7dy"; */
+"IZI-R6-7dy.text" = "To:";
+
+/* Class = "UILabel"; text = "From:"; ObjectID = "e4k-pg-emy"; */
+"e4k-pg-emy.text" = "From:";

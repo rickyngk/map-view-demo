@@ -43,10 +43,10 @@
 		16ACF371A25CE9F86BC2F2E2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2A7BF024734AF35F9DB962FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B770E4AE747BEC17648BCB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		C76201F31CA1548100BEF30D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		C76201F41CA154A300BEF30D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		C7BE28B91CA7D17200B2451C /* XGMSMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGMSMarker.swift; sourceTree = "<group>"; };
 		C7BE28BB1CA7D66A00B2451C /* GMRouteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMRouteService.swift; sourceTree = "<group>"; };
+		C7BE28BE1CA7E69800B2451C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		C7BE28C01CA7E6A700B2451C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C7C0F3C21CA120DC00F4E8B4 /* MapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C0F3C51CA120DC00F4E8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C0F3C71CA120DC00F4E8B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -394,8 +394,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				C7C0F3CA1CA120DC00F4E8B4 /* Base */,
-				C76201F31CA1548100BEF30D /* en */,
-				C76201F41CA154A300BEF30D /* vi */,
+				C7BE28BE1CA7E69800B2451C /* vi */,
+				C7BE28C01CA7E6A700B2451C /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
