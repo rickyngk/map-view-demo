@@ -19,9 +19,6 @@ class ViewController: UIViewController {
     var routePolyline: GMSPolyline!
     let routeService = GMRouteService()
     
-    //can not test in similator -- remove
-    //var locManager:CLLocationManager!
-    
     weak var currentInput:UITextField?
     
     @IBAction func onTouchOnInputDepart(sender: AnyObject) {
@@ -39,23 +36,13 @@ class ViewController: UIViewController {
         self.mapView.camera = camera
         self.mapView.delegate = self
         self.mapView.myLocationEnabled = true
+        self.mapView.settings.scrollGestures = true
+        self.mapView.settings.zoomGestures = true
+        self.mapView.settings.myLocationButton = true
         
         sourceMarker = XGMSMarker.create(NSLocalizedString("From", comment: ""), map: self.mapView);
         destMarker = XGMSMarker.create(NSLocalizedString("To", comment: ""), map: self.mapView);
         destMarker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
-        
-        
-        /*
-        // can not test in similator -- remove
-        //find current position
-        if CLLocationManager.locationServicesEnabled() {
-            locManager = CLLocationManager()
-            locManager.requestWhenInUseAuthorization()
-            locManager.delegate = self
-            locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locManager.startUpdatingLocation()
-        }
-        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,23 +50,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-
-/*
-// can not test in similator -- remove
-extension ViewController: CLLocationManagerDelegate {
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("\(error)");
-    }
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        if (!destMarker.hasInit && sourceMarker.hasInit) {
-            let camera = GMSCameraPosition.cameraWithLatitude(locValue.latitude, longitude: locValue.longitude, zoom: 2)
-            mapView.camera = camera
-            locManager.stopUpdatingLocation();
-        }
-    }
-}
-*/
 
 extension ViewController {
     private func onSelectLocation(sender: AnyObject) {
