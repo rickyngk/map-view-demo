@@ -37,6 +37,7 @@ class ViewController: UIViewController {
 
         let camera = GMSCameraPosition.cameraWithLatitude(0.0, longitude: 0.0, zoom: 1)
         self.mapView.camera = camera
+        self.mapView.delegate = self
         self.mapView.myLocationEnabled = true
         
         sourceMarker = XGMSMarker.create(NSLocalizedString("From", comment: ""), map: self.mapView);
@@ -102,18 +103,36 @@ extension ViewController {
                     //draw route
                     let route = self.routeService.overviewPolyline["points"] as! String
                     let path: GMSPath = GMSPath(fromEncodedPath: route)!
-                    self.routePolyline = nil
+                    if self.routePolyline != nil {
+                        self.routePolyline.map = nil
+                    }
+                    
                     self.routePolyline = GMSPolyline(path: path)
                     self.routePolyline.map = self.mapView
                 }
             })
 
         } else if (destMarker.hasInit) {
-            let camera = GMSCameraPosition.cameraWithLatitude(destMarker.position.latitude, longitude: destMarker.position.longitude, zoom: 1)
+            let camera = GMSCameraPosition.cameraWithLatitude(destMarker.position.latitude, longitude: destMarker.position.longitude, zoom: 10)
             mapView.camera = camera
         } else if (sourceMarker.hasInit) {
-            let camera = GMSCameraPosition.cameraWithLatitude(sourceMarker.position.latitude, longitude: sourceMarker.position.longitude, zoom: 1)
+            let camera = GMSCameraPosition.cameraWithLatitude(sourceMarker.position.latitude, longitude: sourceMarker.position.longitude, zoom: 10)
             mapView.camera = camera
+        }
+    }
+    
+    func didEndDraggingMarker(marker: XGMSMarker, respone: GMSReverseGeocodeResponse?, error: NSError?) {
+        if error == nil {
+            if let addressObj:GMSAddress = (respone?.results()![0])! as GMSAddress {
+                let text = addressObj.lines![0];
+                if marker == self.sourceMarker {
+                    self.inputDepart.text = text
+                    self.updateMarker(sourceMarker, position: sourceMarker.position, caption: text)
+                } else {
+                    self.inputDestination.text = text
+                    self.updateMarker(destMarker, position: destMarker.position, caption: text)
+                }
+            }
         }
     }
 }
@@ -144,3 +163,12 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
     }
 }
 
+extension ViewController: GMSMapViewDelegate {
+    func mapView(mapView: GMSMapView, didEndDraggingMarker marker: GMSMarker) {
+        if let m:XGMSMarker = (marker as! XGMSMarker) {
+            GMSGeocoder().reverseGeocodeCoordinate(m.position, completionHandler: { (respone, error) in
+                self.didEndDraggingMarker(m, respone: respone, error: error)
+            })
+        }
+    }
+}

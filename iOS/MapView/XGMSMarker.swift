@@ -26,6 +26,7 @@ class XGMSMarker: GMSMarker {
         m.mapRef = map
         m.position.longitude = 0
         m.position.latitude = 0
+        m.draggable = true
         return m
     }
 }
