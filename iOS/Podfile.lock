@@ -1,10 +1,16 @@
 PODS:
   - GoogleMaps (1.12.3)
+  - Nimble (3.2.0)
+  - Quick (0.9.1)
 
 DEPENDENCIES:
   - GoogleMaps
+  - Nimble (~> 3.2.0)
+  - Quick (~> 0.9.0)
 
 SPEC CHECKSUMS:
   GoogleMaps: a4ac67918d0b5ba5f6b9893ac80487e357779e6c
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
 
 COCOAPODS: 0.39.0
