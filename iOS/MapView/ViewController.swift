@@ -97,9 +97,7 @@ extension ViewController {
             let bounds = GMSCoordinateBounds(coordinate: sourceMarker.position, coordinate: destMarker.position)
             let camera = mapView.cameraForBounds(bounds, insets:UIEdgeInsets.init(top: 100.0, left: 100.0, bottom: 100.0, right: 100.0))
             mapView.camera = camera!
-            let source = String(format: "%f,%f", sourceMarker.position.latitude, sourceMarker.position.longitude)
-            let dest = String(format: "%f,%f", destMarker.position.latitude, destMarker.position.longitude)
-            routeService.search(source, destination: dest, withCompletionHandler: { (status, success) in
+            routeService.search(sourceMarker.position, destination: destMarker.position, withCompletionHandler: { (status, success) in
                 if (success) {
                     //draw route
                     let route = self.routeService.overviewPolyline["points"] as! String

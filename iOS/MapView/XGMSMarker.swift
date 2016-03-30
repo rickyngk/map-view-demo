@@ -24,6 +24,8 @@ class XGMSMarker: GMSMarker {
         let m = XGMSMarker()
         m.title = title
         m.mapRef = map
+        m.position.longitude = 0
+        m.position.latitude = 0
         return m
     }
 }

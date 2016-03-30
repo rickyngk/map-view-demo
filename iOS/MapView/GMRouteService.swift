@@ -24,9 +24,14 @@ class GMRouteService {
     
     
     //  reference: http://www.appcoda.com/google-maps-api-tutorial/
-    func search(origin: String!, destination: String!, withCompletionHandler completionHandler: ((status: String, success: Bool) -> Void)) {
-        if let originLocation = origin {
-            if let destinationLocation = destination {
+    
+    
+    
+    func search(origin: CLLocationCoordinate2D!, destination: CLLocationCoordinate2D!, withCompletionHandler completionHandler: ((status: String, success: Bool) -> Void)) {
+        let source:String? = String(format: "%f,%f", origin.latitude, origin.longitude)
+        let dest:String? = String(format: "%f,%f", destination.latitude, destination.longitude)
+        if let originLocation = source {
+            if let destinationLocation = dest {
                 var directionsURLString = baseURLGeocode + "origin=" + originLocation + "&destination=" + destinationLocation + "&key=" + Constants.GOOGLE_MAP_SERVER_KEY
                 directionsURLString = directionsURLString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
                 let directionsURL = NSURL(string: directionsURLString)
