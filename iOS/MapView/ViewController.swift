@@ -102,6 +102,7 @@ extension ViewController {
                     //draw route
                     let route = self.routeService.overviewPolyline["points"] as! String
                     let path: GMSPath = GMSPath(fromEncodedPath: route)!
+                    self.routePolyline = nil
                     self.routePolyline = GMSPolyline(path: path)
                     self.routePolyline.map = self.mapView
                 }
