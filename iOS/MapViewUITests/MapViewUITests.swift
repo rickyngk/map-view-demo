@@ -45,6 +45,16 @@ class MapViewUITests: XCTestCase {
         self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element)
         self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(1).childrenMatchingType(.Other).element)
     }
+    
+    func testSameSourceAndDesitationLocation()  {
+        doInput("Enter depart point", searchInput: "Tran Hung Dao Ho Chi Minh")
+        sleep(1)
+        doInput("Enter destination", searchInput: "Tran Hung Dao Ho Chi Minh")
+        
+        self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element)
+        self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(1).childrenMatchingType(.Other).element)
+
+    }
 }
 
 

@@ -72,7 +72,7 @@ class ViewController_ViewModelTest: XCTestCase {
         XCTAssertTrue(hasUpdateSource && hasUpdateDes)
     }
     
-    func testFightRoute() {
+    func testFindRoute() {
         let expectation = expectationWithDescription("Wait for route")
         
         var viewModel: MapViewModelProtocol! {
@@ -88,6 +88,25 @@ class ViewController_ViewModelTest: XCTestCase {
        
         waitForExpectationsWithTimeout(2000) { (error) in
             XCTAssertTrue(viewModel.hasRoute())
+        }
+    }
+    
+    func testNoRouteFound() {
+        let expectation = expectationWithDescription("Wait for route")
+        
+        var viewModel: MapViewModelProtocol! {
+            didSet {
+                viewModel.routeUpdated = { (viewModel, success) in
+                    expectation.fulfill()
+                }
+            }
+        }
+        viewModel = MapViewModel(map: mapView, source: source, dest: des)
+        viewModel.updateSourceMarker(CLLocationCoordinate2D(latitude: 0, longitude: 0), caption: "")
+        viewModel.updateDestMarker(CLLocationCoordinate2D(latitude: 1, longitude: 1), caption: "")
+        
+        waitForExpectationsWithTimeout(2000) { (error) in
+            XCTAssertTrue(!viewModel.hasRoute())
         }
     }
 }
