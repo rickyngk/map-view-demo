@@ -13,6 +13,10 @@
 		B5AC52D6594319B1737447CC /* Pods_MapViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E78031DEB11B38051F115 /* Pods_MapViewUITests.framework */; };
 		C76FBBE81CAC4A9900E0DAAE /* XGMSMakerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FBBE71CAC4A9900E0DAAE /* XGMSMakerTest.swift */; };
 		C76FBBEE1CAC52EC00E0DAAE /* GMRouteServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FBBED1CAC52EC00E0DAAE /* GMRouteServiceTest.swift */; };
+		C76FBBF11CACD09400E0DAAE /* ViewController~ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FBBF01CACD09400E0DAAE /* ViewController~ViewModel.swift */; };
+		C76FBBF31CACE28400E0DAAE /* ViewController~GMSAutocompleteViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FBBF21CACE28400E0DAAE /* ViewController~GMSAutocompleteViewControllerDelegate.swift */; };
+		C76FBBF51CACE2AC00E0DAAE /* ViewController~GMSMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FBBF41CACE2AC00E0DAAE /* ViewController~GMSMapViewDelegate.swift */; };
+		C76FBBF91CACF76B00E0DAAE /* ViewController~ViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FBBF81CACF76B00E0DAAE /* ViewController~ViewModelTest.swift */; };
 		C7BE28BA1CA7D17200B2451C /* XGMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE28B91CA7D17200B2451C /* XGMSMarker.swift */; };
 		C7BE28BC1CA7D66A00B2451C /* GMRouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE28BB1CA7D66A00B2451C /* GMRouteService.swift */; };
 		C7BE28C51CA83B7600B2451C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7BE28C71CA83B7600B2451C /* Localizable.strings */; };
@@ -21,11 +25,9 @@
 		C7C0F3CB1CA120DC00F4E8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3C91CA120DC00F4E8B4 /* Main.storyboard */; settings = {ASSET_TAGS = ("google map", ); }; };
 		C7C0F3CD1CA120DC00F4E8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3CC1CA120DC00F4E8B4 /* Assets.xcassets */; };
 		C7C0F3D01CA120DC00F4E8B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3CE1CA120DC00F4E8B4 /* LaunchScreen.storyboard */; };
-		C7C0F3DB1CA120DC00F4E8B4 /* MapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3DA1CA120DC00F4E8B4 /* MapViewTests.swift */; };
 		C7C0F3E61CA120DC00F4E8B4 /* MapViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3E51CA120DC00F4E8B4 /* MapViewUITests.swift */; };
 		C7C0F3F41CA12C5D00F4E8B4 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F3F31CA12C5D00F4E8B4 /* config.swift */; };
 		C7C0F3F81CA12E7800F4E8B4 /* config.swift.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7C0F3F71CA12E7800F4E8B4 /* config.swift.txt */; };
-		C7C75A6E1CAC36F7008DB6B5 /* LocationInputSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75A6D1CAC36F7008DB6B5 /* LocationInputSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		C22E78031DEB11B38051F115 /* Pods_MapViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76FBBE71CAC4A9900E0DAAE /* XGMSMakerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGMSMakerTest.swift; sourceTree = "<group>"; };
 		C76FBBED1CAC52EC00E0DAAE /* GMRouteServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMRouteServiceTest.swift; sourceTree = "<group>"; };
+		C76FBBF01CACD09400E0DAAE /* ViewController~ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController~ViewModel.swift"; sourceTree = "<group>"; };
+		C76FBBF21CACE28400E0DAAE /* ViewController~GMSAutocompleteViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController~GMSAutocompleteViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		C76FBBF41CACE2AC00E0DAAE /* ViewController~GMSMapViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController~GMSMapViewDelegate.swift"; sourceTree = "<group>"; };
+		C76FBBF81CACF76B00E0DAAE /* ViewController~ViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController~ViewModelTest.swift"; sourceTree = "<group>"; };
 		C7BE28B91CA7D17200B2451C /* XGMSMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGMSMarker.swift; sourceTree = "<group>"; };
 		C7BE28BB1CA7D66A00B2451C /* GMRouteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMRouteService.swift; sourceTree = "<group>"; };
 		C7BE28BE1CA7E69800B2451C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
@@ -71,14 +77,12 @@
 		C7C0F3CF1CA120DC00F4E8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7C0F3D11CA120DC00F4E8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C0F3D61CA120DC00F4E8B4 /* MapViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7C0F3DA1CA120DC00F4E8B4 /* MapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTests.swift; sourceTree = "<group>"; };
 		C7C0F3DC1CA120DC00F4E8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C0F3E11CA120DC00F4E8B4 /* MapViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C0F3E51CA120DC00F4E8B4 /* MapViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUITests.swift; sourceTree = "<group>"; };
 		C7C0F3E71CA120DC00F4E8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C0F3F31CA12C5D00F4E8B4 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		C7C0F3F71CA12E7800F4E8B4 /* config.swift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.swift.txt; sourceTree = "<group>"; };
-		C7C75A6D1CAC36F7008DB6B5 /* LocationInputSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInputSpec.swift; sourceTree = "<group>"; };
 		DAE5339CD8C038C21699F6CD /* Pods-MapViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapViewTests/Pods-MapViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		E994D0BC3ECA947A3AC48A00 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +140,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C76FBBEF1CACD07300E0DAAE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7C0F3C71CA120DC00F4E8B4 /* ViewController.swift */,
+				C76FBBF01CACD09400E0DAAE /* ViewController~ViewModel.swift */,
+				C76FBBF21CACE28400E0DAAE /* ViewController~GMSAutocompleteViewControllerDelegate.swift */,
+				C76FBBF41CACE2AC00E0DAAE /* ViewController~GMSMapViewDelegate.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		C7C0F3B91CA120DC00F4E8B4 = {
 			isa = PBXGroup;
 			children = (
@@ -162,8 +177,8 @@
 		C7C0F3C41CA120DC00F4E8B4 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				C76FBBEF1CACD07300E0DAAE /* ViewController */,
 				C7C0F3C51CA120DC00F4E8B4 /* AppDelegate.swift */,
-				C7C0F3C71CA120DC00F4E8B4 /* ViewController.swift */,
 				C7BE28B91CA7D17200B2451C /* XGMSMarker.swift */,
 				C7C0F3C91CA120DC00F4E8B4 /* Main.storyboard */,
 				C7C0F3CC1CA120DC00F4E8B4 /* Assets.xcassets */,
@@ -179,10 +194,10 @@
 		C7C0F3D91CA120DC00F4E8B4 /* MapViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				C7C0F3DA1CA120DC00F4E8B4 /* MapViewTests.swift */,
 				C7C0F3DC1CA120DC00F4E8B4 /* Info.plist */,
 				C76FBBE71CAC4A9900E0DAAE /* XGMSMakerTest.swift */,
 				C76FBBED1CAC52EC00E0DAAE /* GMRouteServiceTest.swift */,
+				C76FBBF81CACF76B00E0DAAE /* ViewController~ViewModelTest.swift */,
 			);
 			path = MapViewTests;
 			sourceTree = "<group>";
@@ -192,7 +207,6 @@
 			children = (
 				C7C0F3E51CA120DC00F4E8B4 /* MapViewUITests.swift */,
 				C7C0F3E71CA120DC00F4E8B4 /* Info.plist */,
-				C7C75A6D1CAC36F7008DB6B5 /* LocationInputSpec.swift */,
 			);
 			path = MapViewUITests;
 			sourceTree = "<group>";
@@ -466,9 +480,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7BE28BC1CA7D66A00B2451C /* GMRouteService.swift in Sources */,
+				C76FBBF11CACD09400E0DAAE /* ViewController~ViewModel.swift in Sources */,
+				C76FBBF51CACE2AC00E0DAAE /* ViewController~GMSMapViewDelegate.swift in Sources */,
 				C7BE28BA1CA7D17200B2451C /* XGMSMarker.swift in Sources */,
 				C7C0F3F41CA12C5D00F4E8B4 /* config.swift in Sources */,
 				C7C0F3C81CA120DC00F4E8B4 /* ViewController.swift in Sources */,
+				C76FBBF31CACE28400E0DAAE /* ViewController~GMSAutocompleteViewControllerDelegate.swift in Sources */,
 				C7C0F3C61CA120DC00F4E8B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +496,7 @@
 			files = (
 				C76FBBE81CAC4A9900E0DAAE /* XGMSMakerTest.swift in Sources */,
 				C76FBBEE1CAC52EC00E0DAAE /* GMRouteServiceTest.swift in Sources */,
-				C7C0F3DB1CA120DC00F4E8B4 /* MapViewTests.swift in Sources */,
+				C76FBBF91CACF76B00E0DAAE /* ViewController~ViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +504,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7C75A6E1CAC36F7008DB6B5 /* LocationInputSpec.swift in Sources */,
 				C7C0F3E61CA120DC00F4E8B4 /* MapViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

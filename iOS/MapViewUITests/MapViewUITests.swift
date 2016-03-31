@@ -12,39 +12,77 @@ class MapViewUITests: XCTestCase {
     var app = XCUIApplication()
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         app.launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        sleep(3)
     }
     
     func testSourceInput() {
-        let app = XCUIApplication()
-        let input = app.textFields["Enter depart point"]
-        input.tap()
-        app.navigationBars["searchBar"].searchFields["Search"].typeText("Nguyen Dinh Chieu Ho Chi Minh")
-        app.tables.childrenMatchingType(.Cell).elementBoundByIndex(0).tap()
+        let input = doInput("Enter depart point", searchInput: "Nguyen Dinh Chieu Ho Chi Minh")
         let input_value:String = input.value as! String
         XCTAssertNotNil(input_value.rangeOfString("Nguyễn Đình Chiểu"))
+        
+        self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element)
     }
     
     func testDestinationInput() {
-        let app = XCUIApplication()
-        let input = app.textFields["Enter destination"]
-        input.tap()
-        app.navigationBars["searchBar"].searchFields["Search"].typeText("Tran Hung Dao Ho Chi Minh")
-        app.tables.childrenMatchingType(.Cell).elementBoundByIndex(0).tap()
+        let input = doInput("Enter destination", searchInput: "Tran Hung Dao Ho Chi Minh")
         let input_value:String = input.value as! String
         XCTAssertNotNil(input_value.rangeOfString("Trần Hưng Đạo"))
+        
+        self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element)
     }
+    
+    func testInputSourceAndDest() {
+        doInput("Enter depart point", searchInput: "Nguyen Dinh Chieu Ho Chi Minh")
+        sleep(1)
+        doInput("Enter destination", searchInput: "Tran Hung Dao Ho Chi Minh")
+        
+        self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element)
+        self.waitForElementToAppear(app.childrenMatchingType(.Window).elementBoundByIndex(1).childrenMatchingType(.Other).element)
+    }
+}
+
+
+
+extension MapViewUITests {
+    func doInput(selector:String, searchInput:String) -> XCUIElement {
+        let input = app.textFields[selector]
+        input.tap()
+        
+        let searchbarNavigationBar = app.navigationBars["searchBar"]
+        waitForElementToAppear(searchbarNavigationBar)
+        
+        let searchBar = searchbarNavigationBar.searchFields.element
+        waitForElementToAppear(searchBar)
+        
+        searchBar.typeText(searchInput)
+        
+        let item = app.tables.childrenMatchingType(.Cell).elementBoundByIndex(0)
+        self.waitForElementToAppear(item)
+        item.tap()
+        
+        return input
+    }
+    
+    
+    //ref: http://masilotti.com/xctest-helpers/
+    func waitForElementToAppear(element: XCUIElement, timeout: NSTimeInterval = 5,  file: String = #file, line: UInt = #line) {
+        let existsPredicate = NSPredicate(format: "exists == true")
+        
+        expectationForPredicate(existsPredicate,
+                                evaluatedWithObject: element, handler: nil)
+        
+        waitForExpectationsWithTimeout(timeout) { (error) -> Void in
+            if (error != nil) {
+                let message = "Failed to find \(element) after \(timeout) seconds."
+                self.recordFailureWithDescription(message, inFile: file, atLine: line, expected: true)
+            }
+        }
+    }
+
 }

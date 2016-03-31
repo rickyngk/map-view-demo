@@ -13,11 +13,17 @@ class XGMSMarker: GMSMarker {
     var hasInit: Bool = false
     weak var mapRef:GMSMapView?
     
-    func updatePosition(position: CLLocationCoordinate2D, caption: String?) {
+    func updatePosition(position: CLLocationCoordinate2D?, caption: String?) {
         hasInit = true;
-        self.position = position
+        if position != nil {
+            self.position = position!
+        }
         self.snippet = caption
         self.map = mapRef
+    }
+    
+    func getLocationCaption() -> String {
+        return self.snippet!
     }
     
     static func create(title: String, map: GMSMapView) -> XGMSMarker {
